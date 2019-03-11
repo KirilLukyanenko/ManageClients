@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "ImportCSV";
+}
+
+<h2>Import CSV</h2>
+
+@using (Html.BeginForm("ImportCSV", "Clients", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input name="file" type="file" required />
+            <input type="submit" value="Import" class="btn btn-default" />
+        </div>
+    </div>
+}
+
